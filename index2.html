@@ -24,24 +24,30 @@
         <button id="startBtn" onclick="timerStart()">Start!</button>
     </div>
     <script>
-    //select element
+        //select element
         const dateTest = document.getElementById('date');
         const topScores = document.querySelector('p');
         const stopWatch = document.querySelector('#stopwatch');
-    //make time array
+        //make time array
         let scores = [];
         let second = 0;
-    //making timer
+        //making timer
         const timer = new Date();
         console.log(Date());
         dateTest.innerHTML = timer;
+        setInterval(myTimer, 1000);
+        //start timer function
+        function timerStart() {
+            clearInterval(timer);
+            second += 10;
+            // stopWatch.innerHTML = second;
+        }
 
-    //start timer function
-    function timerStart(){
-        clearInterval(timer);
-        second += 10;
-        stopWatch.innerHTML = second;
-    }
+        //myTimer function
+        function myTimer() {
+            const d = new Date();
+            stopWatch.innerHTML = d.toLocaleTimeString();
+        }
 
 
     </script>
