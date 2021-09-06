@@ -15,16 +15,21 @@
 
 <body>
     <div class="leaderboard">
+        <span id="date"></span>
         <h1>Top Score: </h1>
         <p></p>
     </div>
     <script>
     //select element
+        const dateTest = document.getElementById('date');
         const topScores = document.querySelector('p');
     //make time array
         let scores = [];
-    //start timer when user goes out
 
+    //start timer when user goes out
+        const timer = new Date();
+        console.log(Date());
+        dateTest.innerHTML = timer;
     //end timer when user opens window
 
     //adds to timer array
