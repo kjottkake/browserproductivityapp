@@ -1,0 +1,10 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.leaderboard {
+    border-radius: 15px;
+    background-color: bisque;
+    width: 50%;
+    padding: 12px;
+}
