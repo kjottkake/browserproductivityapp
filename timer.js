@@ -1,21 +1,20 @@
-const time = new Date();
-console.log(time);
+//start timer
+function startTimer(){
+    const time = new Date();
+    let hour = time.getHours();
+    let minute = time.getMinutes();
+    let second = time.getSeconds();
+    let startTime = ((hour * 60) + (minute * 60) + second);
+    console.log(startTime);
+}
 
-let startTime;
-
-let minutes = time.getMinutes();
-let seconds = time.getSeconds();
-
-console.log("startTime: " + minutes + ":" + seconds)
-
-startTime = (minutes * 60) + seconds;
-
-console.log("Endtime: " + startTime)
-
-let topScore = [];
-
-topScore.push(startTime);
-topScore.push(startTime);
-topScore.push(startTime);
-
-console.table(topScore);
+//stop timer
+    //add to array
+function stopTimer(){
+    const time = new Date();
+    let hour = time.getHours();
+    let minute = time.getMinutes();
+    let second = time.getSeconds();
+    let startTime = ((hour * 60) + (minute * 60) + second);
+    console.log(startTime);
+}
