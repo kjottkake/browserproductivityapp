@@ -8,3 +8,12 @@ body {
     width: 50%;
     padding: 12px;
 }
+
+.stopwatch {
+    border-radius: 15px;
+    background-color: bisque;
+    width: 20%;
+    padding: 12px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
