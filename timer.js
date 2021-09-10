@@ -27,6 +27,8 @@ function stopTimer(){
     // const topScoreLi = document.createElement('li');
     // topScoreLi.innerHTML = endTime;
     // leaderboard.appendChild(topScoreLi);
+    // resetScores();
+    sortTopScores();
 }
 
 
@@ -40,29 +42,32 @@ function getTime(){
     return currentTimeInSeconds;
 }
 
+function resetScores(){
+    leaderboard.remove();
+}
+
 function sortTopScores(){
     scores.sort(function(a, b){return b - a});
     console.table(scores);
 
-    // //add to array
-    // const topScoreLi = document.createElement('li');
-    // // topScoreLi.innerHTML = endTime;
-    // for (i=0; i< scores.length; i ++){
-    //     // leaderboard.appendChild(scores[i]); 
-    //     topScoreLi.innerHTML = scores[i];
-    // }
-    // leaderboard.appendChild(topScoreLi);
-    showLeader();
+    for (i = 0; i < scores.length; i++){
+    const topScoreLi = document.createElement('li');
+    topScoreLi.innerHTML = scores[i];
+    leaderboard.appendChild(topScoreLi);
+    }
     
+    // updateLeader();
 }
 
-function showLeader(){
-    //add to array
-    const topScoreLi = document.createElement('li');
-    // topScoreLi.innerHTML = endTime;
-    for (i=0; i< scores.length; i ++){
-        // leaderboard.appendChild(scores[i]); 
-        topScoreLi.innerHTML = scores[i];
-    }
-    leaderboard.appendChild(topScoreLi);
-}
+// function updateLeader(){
+//     //add to array
+//     const topScoreLi = document.createElement('li');
+//     // topScoreLi.innerHTML = endTime;
+
+//     // for (i=0; i< scores.length; i ++){
+//     //     topScoreLi.innerHTML = scores[i];
+//     //     leaderboard.appendChild(topScoreLi);
+//     // }
+//     topScoreLi.innerHTML = scores;
+//     leaderboard.appendChild(topScoreLi);
+// }
