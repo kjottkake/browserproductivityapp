@@ -1,3 +1,8 @@
+// TODO:
+//     [] get timer to display time
+//     [] insert times into Array.
+//     [] display times in correct order
+
 const leaderboard = document.getElementById('topScore');
 
 let scores = [];
