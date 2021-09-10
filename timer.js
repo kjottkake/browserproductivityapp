@@ -1,3 +1,5 @@
+const leaderboard = document.getElementById('topScore');
+
 let scores = [];
 let startTime;
 let endTime;
@@ -5,15 +7,18 @@ let endTime;
 //start timer
 function startTimer(){
     startTime = getTime();
-    alert("timer started!");
+    console.log("started timer!");
 }
 
 //stop timer
     //add to array
 function stopTimer(){
     endTime = getTime() - startTime;
-    scores.push(endTime);
-    console.table(scores);
+    scores.push(endTime);   //puts endtime into scores
+    console.table(scores); //test output
+    const topScoreLi = document.createElement('li');
+    topScoreLi.innerHTML = endTime;
+    leaderboard.appendChild(topScoreLi);
 }
 
 
