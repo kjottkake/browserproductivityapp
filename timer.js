@@ -1,6 +1,6 @@
 // TODO:
 //     [X] get timer to display time
-//     [] Get timer to stop display time when stop button is pressed
+//     [x] Get timer to stop display time when stop button is pressed
 //     [x] insert times into Array.
 //     [x] display times in correct order
 //     [] Add miliseconds
@@ -13,7 +13,7 @@ let startTime;
 let endTime;
 
 //defines variables copied from stopwatch.js
-let millisecoundSW = 0;
+let millisecondSW = 0;
 let timerSW;
 let secondSW = 0;
 
@@ -24,8 +24,8 @@ function startTimer(){
     console.log("started timer!");
 
     timerSW = setInterval(() => {
-        millisecoundSW += 10;
-        let dateTimer = new Date(millisecoundSW);
+        millisecondSW += 10;
+        let dateTimer = new Date(millisecondSW);
 
         watch.innerHTML =
             ('0' + dateTimer.getUTCHours()).slice(-2) + ':' +
@@ -43,7 +43,7 @@ function stopTimer(){
     console.table(scores); //test output
     clearInterval(timerSW);
     setInterval(timerSW);
-    millisecoundSW = 0;
+    millisecondSW = 0;
     watch.innerHTML = "00:00:00:00";
     // sortTopScores();
 }
