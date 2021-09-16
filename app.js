@@ -25,3 +25,10 @@
      const d = new Date();
      stopWatch.innerHTML = d.toLocaleTimeString();
  }
+
+ function test(){
+    let i;
+    for (i = 0; i < 10; i++){
+        console.table("index: " + i)
+    }
+}

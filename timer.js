@@ -1,7 +1,8 @@
 // TODO:
 //     [] get timer to display time
-//     [] insert times into Array.
+//     [x] insert times into Array.
 //     [x] display times in correct order
+//     [] Add miliseconds
 
 const leaderboard = document.getElementById('topScore');
 
