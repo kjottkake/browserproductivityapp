@@ -22,13 +22,9 @@ function startTimer(){
 //stop timer
     //add to array
 function stopTimer(){
-    endTime = getTime() - startTime;
+    endTime = getTime() - startTime; //gets endTime via subtracting from getTime function
     scores.push(endTime);   //puts endtime into scores
     console.table(scores); //test output
-    // const topScoreLi = document.createElement('li');
-    // topScoreLi.innerHTML = endTime;
-    // leaderboard.appendChild(topScoreLi);
-    // resetScores();
     sortTopScores();
 }
 
@@ -44,7 +40,7 @@ function getTime(){
 }
 
 function resetScores(){
-    leaderboard.remove();
+    leaderboard.remove(); //once runs doesn't allow adding to li via DOM <-needs to be fixed.
 }
 
 function sortTopScores(){
