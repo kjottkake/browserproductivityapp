@@ -41,6 +41,10 @@ function stopTimer(){
     endTime = getTime() - startTime; //gets endTime via subtracting from getTime function
     scores.push(endTime);   //puts endtime into scores
     console.table(scores); //test output
+    clearInterval(timerSW);
+    setInterval(timerSW);
+    millisecoundSW = 0;
+    watch.innerHTML = "00:00:00:00";
     // sortTopScores();
 }
 
